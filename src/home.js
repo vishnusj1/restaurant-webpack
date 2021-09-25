@@ -35,7 +35,7 @@ const homePage = (function () {
 
         const heroDescriptionText = document.createElement('h1');
 
-        heroDescription.textContent = `Simply Delicous.`;
+        heroDescription.textContent = `Simply Delicious.`;
 
         heroDescription.appendChild(heroDescriptionText);
         heroRight.appendChild(heroDescription);
