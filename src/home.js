@@ -17,7 +17,7 @@ const homePage = (function () {
         heroImgContainer.classList.add('hero-img-container');
 
         const heroImg = document.createElement('img');
-        heroImg.src = "./images/photo-1611765083444-a3ce30f1c885.webp"
+        heroImg.src = "./images/hero.webp"
         heroImg.alt = "Good times."
 
         heroImgContainer.appendChild(heroImg);
