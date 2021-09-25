@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+:root {
+    --primary-color: #00483c;
+    --secondary-color: #fdfff7;
+    --text-color: #1a1423;
+    --font-heading: "Italiana", serif;
+}
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -16,37 +24,37 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-  list-style: none;
+    list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -54,7 +62,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -71,3 +79,230 @@ select {
     scroll-behavior: auto !important;
   }
 } */
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout tools */
+.ps {
+    padding: 0 1.8rem;
+}
+.mr-t {
+    margin-top: 2rem;
+}
+
+/* Style for home page */
+
+header {
+    display: block;
+    height: 100px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06),
+        0 0 2px rgba(0, 0, 0, 0.07);
+}
+.address {
+    background-color: var(--primary-color);
+    height: 1.8rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06),
+        0 0 2px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.address p {
+    font-size: 14px;
+    text-align: center;
+    vertical-align: center;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+.wrapper {
+    padding: 0.2rem 1.8rem;
+}
+
+.site-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    font-family: var(--font-heading);
+}
+.site-logo a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2rem;
+}
+.nav-menu {
+    margin-left: auto;
+}
+
+.empty-space {
+    display: block;
+    background-color: #00483c;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-menu ul {
+    text-decoration: none;
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+}
+.nav-menu ul li:first-of-type {
+    padding-left: 0;
+}
+.nav-menu ul li:last-of-type {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+.nav-menu ul li {
+    padding-left: 1.6rem;
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-section-left {
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+}
+.hero-img-container {
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-60%);
+    border: 5px solid var(--primary-color);
+    height: -moz-fit-content;
+    height: fit-content;
+}
+.hero-img-container img {
+    height: fit-content;
+    width: 400px;
+    object-fit: contain;
+}
+.hero-section-right {
+    font-family: var(--font-heading);
+    text-align: center;
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-description {
+    position: relative;
+    font-size: xxx-large;
+}
+@media only screen and (min-device-width: 360px) and (max-device-width: 812px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-img-container {
+        top: 0;
+        position: none;
+        transform: none;
+    }
+    .hero-section-right {
+        margin: 20px 0;
+    }
+    .hero-description {
+        font-size: x-large;
+    }
+}
+
+/* Style for Menu Page */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu ul {
+    list-style: none;
+}
+.menu li {
+    list-style: none;
+    padding: 2em;
+    padding-top: 0;
+}
+.menu li:first-of-type {
+    padding-top: 0;
+}
+.menu li:last-of-type {
+    padding-bottom: 0;
+}
+.menu-header {
+    font-family: "Italiana";
+    text-transform: uppercase;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-header hr {
+    content: "";
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+/* Contact Page Style */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact-header {
+    font-family: "Italiana";
+    text-transform: uppercase;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact hr {
+    content: "";
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+.contact-details {
+    text-align: left;
+}
